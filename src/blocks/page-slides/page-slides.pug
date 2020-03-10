@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (page-slides)
+
+mixin page-slides(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +page-slides('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' page-slides--' + modsList[i].trim();
+      }
+    }
+
+  .page-slides(class=allMods)&attributes(attributes)
+    .page-slides__inner
+      block

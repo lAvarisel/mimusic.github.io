@@ -1,0 +1,128 @@
+extends ../pug/layout.pug
+
+block meta
+  title MI MUSIC
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+block nav
+  .page-header-nav
+    +main-nav('10')
+    +social()
+      +social-link('https://www.facebook.com/profile.php?id=100011672930358', 'fb')(title='Facebook')
+        img(src="img/facebook.png", alt="")
+      +social-link('https://www.facebook.com/profile.php?id=100011672930358', 'tw')(title='Twitter')
+        img(src="img/twitter.png", alt="")
+      +social-link('https://www.facebook.com/profile.php?id=100011672930358', 'ig')(title='Instagram')
+        img(src="img/instagram.png", alt="")
+      +social-link('https://www.facebook.com/profile.php?id=100011672930358', 'yt')(title='YouTube')
+        img(src="img/youtube.png", alt="")
+
+block content
+  +page-slides()
+    .page-slides__title
+      p NEW TOUR
+    h1 UNFORGETTABLE
+    p Live tour continues with new international dates just added
+    .page-slides__btns
+      +btn('FIND TICKETS', 'page-slides__btns_find')
+      +btn('', 'page-slides__btns_play')
+        img(src='img/play-btn.png', alt='Play button')
+      span PLAY ALL SONGS
+  //- +pagination()
+  //-   +pagination-item('1', '/1')
+  //-   +pagination-item('1', '/1')
+  //-   +pagination-item('1', '/1')
+  +album-livedates()
+    +livedates()
+      .livedates__title
+        h2 Live Dates
+        span ::
+      img.livedates__rectangle(src='img/rectangle.jpg', alt='decorate image')
+      ul.livedates__list
+        +livedates-item({
+          day: '21',
+          month: 'jan',
+          img: 'img/melanie-van-leeuwen.png',
+          name: 'Unforgettable: Live',
+          description: 'Live show and albums signing',
+          place: 'San Francisco, USA',
+          time: '8 : 30 PM',
+        })
+        +livedates-item({
+          day: '25',
+          month: 'jan',
+          img: 'img/john-raptis.png',
+          name: 'Unforgettable: Live',
+          description: 'Live show and albums signing',
+          place: 'San Francisco, USA',
+          time: '8 : 30 PM',
+        })
+        +livedates-item({
+          day: '31',
+          month: 'jan',
+          img: 'img/edward-cisneros.png',
+          name: 'Unforgettable: Live',
+          description: 'Live show and albums signing',
+          place: 'San Francisco, USA',
+          time: '8 : 30 PM',
+        })
+        +livedates-item({
+          day: '9',
+          month: 'feb',
+          img: 'img/william-white.png',
+          name: 'Unforgettable: Live',
+          description: 'Live show and albums signing',
+          place: 'San Francisco, USA',
+          time: '8 : 30 PM',
+        } , 'sold')
+        +livedates-item({
+          day: '13',
+          month: 'feb',
+          img: 'img/maelle-ramsay.png',
+          name: 'Unforgettable: Live',
+          description: 'Live show and albums signing',
+          place: 'San Francisco, USA',
+          time: '8 : 30 PM',
+        })
+      +btn('View all live dates ::', 'livedates__btns_viewAll')
+    +album()
+      .album__title
+        h2.album__titleName Listen to MIMUSIC 
+        img.album__rectangle(src='img/rectangle-album.png', alt='decorate image')
+        p.album__subtitle For all the latest performances find us on Spotify
+      .album__albums
+        .album__column_1
+          +btn('', 'album__smallbtn_1')
+            img(src='img/album-play-btn.png', alt='Play button')
+            //- <audio src="media/Alan Walker - All Falls Down [midi-mp3.org].mp3" controls></audio>
+          .album__rectangle1
+          .album__rectangle2
+        .album__column_2
+          +btn('', 'album__bigbtn_1')
+            img(src='img/album-play-btn.png', alt='Play button')
+          +btn('', 'album__bigbtn_2')
+            img(src='img/album-play-btn.png', alt='Play button')
+          img.album__logo(src="./img/logo.png", alt="logo image")
+          +btn('View all live dates ::', 'album__btns_viewAll')
+        .album__column_3
+          +btn('', 'album__smallbtn_2')
+            img(src='img/album-play-btn.png', alt='Play button')
+          .album__rectangle3
+          .album__rectangle4
+          .album__circle1
+          .album__circle2
+  +page-social()
+    .social__column
+
+      
+
+
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

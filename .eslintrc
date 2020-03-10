@@ -1,0 +1,11 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "globals": {
+    "require": true,
+    "window": true,
+  },
+  "rules": {
+    "strict": 0
+  }
+}

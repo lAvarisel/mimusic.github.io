@@ -1,0 +1,79 @@
+//- Все примеси в этом файле должны начинаться c имени блока (livedates)
+
+mixin livedates(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +livedates('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' livedates--' + modsList[i].trim();
+      }
+    }
+
+  .livedates(class=allMods)&attributes(attributes)
+    .livedates__inner
+      block
+
+mixin livedates-item(data, mod)
+
+  -
+    var thisItemClass = 'livedates__item';
+    var thisItemTimeClass = 'livedates__time';
+    if(mod == 'sold') {
+      thisItemClass += '  livedates__item--sold';
+      thisItemTimeClass += '  livedates__time--sold'
+    }
+    else {
+      thisItemClass += '  livedates__item--find';
+    }
+  
+  li(class= thisItemClass)
+    .livedates__column
+      .livedates__calendar
+        p.livedates__day= data.day
+        p.livedates__month= data.month
+      img(src=data.img, alt="livedate decorate image")
+      .livedates__description
+        p.livedates__name= data.name
+        p.livedates__subtitle= data.description
+    .livedates__column
+      .livedates__location
+        p.livedates__place= data.place
+        p(class=thisItemTimeClass)= data.time
+      if(mod == 'sold')
+        +btn('sold out', 'livedates__btns_sold')
+      else 
+        +btn('Find tickets', 'livedates__btns_find')
+
+  
+  
+  //- Принимает:
+  //-   text   {string} - содержимое пункта
+  //-   href   {string} - ссылка этого пункта (если пустая, то это не ссылка, а span)
+  //-   active {bool}   - флаг «это активный пункт»
+  //-   mods   {string} - список модификаторов
+  -
+    // список модификаторов
+  //-   var allMods = '';
+  //-   if(typeof(mods) !== 'undefined' && mods) {
+  //-     var modsList = mods.split(',');
+  //-     for (var i = 0; i < modsList.length; i++) {
+  //-       allMods = allMods + ' livedates__item--' + modsList[i].trim();
+  //-     }
+  //-   }
+  //-   if(typeof(active) !== 'undefined' && active) {
+  //-     allMods = allMods + ' livedates__item--active';
+  //-   }
+
+  //- if(typeof(href) !== 'undefined' && href)
+  //-   a.pagination__item(class=allMods, href=href)&attributes(attributes)!= text
+  //- else
+  //-   span.pagination__item(class=allMods)&attributes(attributes)!= text

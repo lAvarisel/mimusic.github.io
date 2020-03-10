@@ -1,0 +1,187 @@
+// В этом файле должны быть стили для БЭМ-блока livedates, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+@font-face {
+  font-family: 'Barlow-SemiBold';
+  src: url('../fonts/Barlow-SemiBold.otf')
+}
+@font-face {
+  font-family: 'Barlow-Medium';
+  src: url('../fonts/Barlow-Medium.otf')
+}
+@font-face {
+  font-family: 'Barlow-Regular';
+  src: url('../fonts/Barlow-Regular.otf')
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto.ttf')
+}
+
+.livedates {
+
+  $block-name:                &; // #{$block-name}__element
+  margin: 0 auto;
+  font-family: Barlow-SemiBold;
+  background-image: url('../img/bg-livedates.png');
+  background-position: center;
+  background-size: cover;
+  padding-top: 405px;
+  padding-bottom: 480px;
+  
+  &__calendar {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b2550;
+    border-radius: 10% 0 0 10%;
+  }
+  &__day {
+    padding: 0;
+    padding-left: 5px;
+    margin: 0;
+    font-size: 30px;
+    letter-spacing: 4.8px;
+    text-align: center;
+    color: #fb516e;
+  }
+  &__month {
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1.06;
+    letter-spacing: 0.36px;
+    text-align: center;
+    color: #fff;
+  }
+  &__inner {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 28px;
+    padding-top: 90px;
+  }
+
+  &__list {
+    padding: 0;
+    margin-top: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__item:last-child {
+    border: none;
+  }
+  &__item {
+    display: flex;
+    max-width: 1170px;
+    height: 160px;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255, .1);
+  }
+  &__item--find:hover {
+    .livedates__calendar {
+      background-color: #032c9e;
+    }
+    .btn {
+      box-shadow: 0px 3px 40px 0 rgba(16, 41, 112, 0.2);
+      background-color: #032c9e;
+    }
+  }
+  &__item--sold:hover {
+    .livedates__calendar {
+      background-color: #032c9e;
+    }
+  }
+  &__column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__name {
+    margin: 0;
+    font-size: 26px;
+    text-align: left;
+    color: #fff;
+  }
+  &__title {
+    font-family: Barlow-Regular;
+    font-size: 60px;
+    text-align: left;
+    color: #fff;
+    display: flex;
+    align-items: baseline;
+    h2 {
+      font-family: Barlow-Regular;
+      font-size: 60px;
+      text-align: left;
+      color: #fff;
+      margin: 0;
+    }
+    span {
+      font-weight: normal;
+      margin-left: 20px;
+    }
+  }
+  &__subtitle {
+    margin: 0;
+    margin-top: 15px;
+    color: #778fc3;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+  &__description {
+    margin-left: 40px;
+  }
+  &__place,
+  &__time {
+    position: relative;
+    margin: 0;
+  }
+  &__place {
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 2;
+    text-align: left;
+    color: #778fc3;
+    padding-left: 35px;
+  }
+  &__place::before {
+    content: url('../img/compass.png');
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+  &__time {
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 2;
+    text-align: left;
+    color: #6aff7f;
+    padding-left: 35px;
+  }
+  &__time::before{
+    content: url('../img/time.png');
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__time--sold {
+    color: #fff;
+  }
+  &__rectangle {
+    margin-top: 40px;
+  }
+}

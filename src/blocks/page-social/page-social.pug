@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (page-social)
+
+mixin page-social(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +page-social('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' page-social--' + modsList[i].trim();
+      }
+    }
+
+  .page-social(class=allMods)&attributes(attributes)
+    .page-social__inner
+      block

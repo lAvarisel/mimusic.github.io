@@ -1,0 +1,16 @@
+// В этом файле должны быть стили для БЭМ-блока album-livedates, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.album-livedates {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-top: -315px;
+  background-image: url('../img/bg-album-livedates.png');
+  background-position: 50% 100%;
+
+  // &__inner {
+  //   padding: 0 28px;
+  // }
+}

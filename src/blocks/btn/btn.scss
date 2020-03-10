@@ -1,0 +1,215 @@
+// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.btn {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: 0;
+  border-radius: $border-radius;
+  // border: 1px solid $gray-lighter;
+  border: 0;
+  padding: $field-padding-vertical  $field-padding-horizontal;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  user-select: none;
+  text-align: center;
+  font-size: 1em;
+  font-family: inherit;
+  line-height: $line-height;
+  text-decoration: none;
+  text-transform: none;
+  color: $text-color;
+  background-color: $gray-lightest;
+  background-image: none;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $text-color;
+    background-color: darken($gray-lightest, 10%);
+    // border-color: darken($gray-lighter, 12%);
+  }
+
+  // &:visited {
+  //   color: $text-color;
+  // }
+
+  &:active,
+  &:focus {
+    @include field-focus;
+  }
+
+  &--disabled,
+  &:disabled {
+    opacity: $opacity;
+    cursor: not-allowed;
+    color: $text-color;
+    background-color: $gray-lightest;
+    // border-color: $gray-lighter;
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+
+  &--page-slides__btns_find {
+    padding: 0;
+    color: #fff;
+    width: 280px;
+    height: 80px;
+    border: 4px solid rgba(255, 255, 255, .7);
+    background-color: #0134a0;
+    line-height: 1.67;
+    letter-spacing: 3.6px;
+    text-align: center;
+    font-family: Barlow-Bold;
+  }
+  &--page-slides__btns_play {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: 92px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #012572;
+    margin-left: 30px;
+  }
+  &--livedates__btns_find {
+    padding: 0;
+    color: #fff;
+    width: 200px;
+    height: 64px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    background-color: transparent;
+    text-transform: uppercase;
+    line-height: 1.67;
+    letter-spacing: 3.6px;
+    text-align: center;
+    font-family: Barlow-Bold;
+    font-size: 14px;
+    margin-left: 98px;
+  }
+  &--livedates__btns_sold,
+  &--livedates__btns_sold:hover {
+    padding: 0;
+    color: #fb516e;
+    width: 200px;
+    height: 64px;
+    text-transform: uppercase;
+    border: 2px solid rgba(255, 255, 255, .1);
+    background-color: transparent;
+    line-height: 1.67;
+    letter-spacing: 3.6px;
+    text-align: center;
+    font-family: Barlow-Bold;
+    font-size: 14px;
+    margin-left: 98px;
+  }
+  &--livedates__btns_viewAll,
+  &--album__btns_viewAll {
+    font-family: Barlow-Medium;
+    font-size: 18px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+  }
+  &--album__btns_viewAll {
+    margin-top: 10px;
+  }
+  &--livedates__btns_viewAll:hover,
+  &--album__btns_viewAll:hover {
+    box-shadow: 0px 3px 40px 0 rgba(16, 41, 112, 0.2);
+    background-color: #032c9e;
+  }
+  &--album__smallbtn_1,
+  &--album__smallbtn_2,
+  &--album__bigbtn_1,
+  &--album__bigbtn_2 {
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    img {
+      visibility: hidden;
+      // display: none;
+    }
+  }
+  &--album__smallbtn_1:hover,
+  &--album__smallbtn_2:hover,
+  &--album__bigbtn_1:hover,
+  &--album__bigbtn_2:hover {
+    box-shadow: 0px 3px 54px 0 rgba(0, 0, 0, 0.4);
+    img {
+      visibility: visible;
+    }
+  }
+  &--album__smallbtn_1,
+  &--album__smallbtn_2 {
+    width: 340px;
+    height: 340px;
+  }
+  &--album__bigbtn_1,
+  &--album__bigbtn_2 {
+    width: 430px;
+    height: 430px;
+  }
+  &--album__smallbtn_1 {
+    background-image: url('../img/album0.png');
+    transform: translateY(-40%);
+  }
+  &--album__smallbtn_2 {
+    background-image: url('../img/album3.png');
+    transform: translateY(-6%);
+  }
+  &--album__bigbtn_1 {
+    background-image: url('../img/album1.png');
+  }
+  &--album__bigbtn_2 {
+    background-image: url('../img/album2.png');
+    margin-top: 30px;
+  }
+  &--album__smallbtn_1:hover{
+    background-image: linear-gradient(rgba(27, 37, 80,.6), rgba(27, 37, 80,.6)), url('../img/album0.png');
+  }
+  &--album__smallbtn_2:hover {
+    background-image: linear-gradient(rgba(27, 37, 80,.6), rgba(27, 37, 80,.6)), url('../img/album3.png');
+  }
+  &--album__bigbtn_1:hover {
+    background-image: linear-gradient(rgba(27, 37, 80,.6), rgba(27, 37, 80,.6)), url('../img/album1.png');
+  }
+  &--album__bigbtn_2:hover {
+    background-image: linear-gradient(rgba(27, 37, 80,.6), rgba(27, 37, 80,.6)), url('../img/album2.png');
+  }
+
+  // &__icon {
+  //   display: inline-block;
+  //   vertical-align: middle;
+  // }
+
+
+
+  // &--main {
+  //   color: #fff;
+  //   background-color: $color-main;
+  //   // border: 1px solid $color-main;
+
+  //   &:hover,
+  //   &:focus {
+  //     color: #fff;
+  //     background-color: darken($color-main, 10%);
+  //     // border-color: darken($color-main, 12%);
+  //   }
+
+  //   &--disabled,
+  //   &:disabled {
+  //     color: #fff;
+  //     background-color: $color-main;
+  //     // border-color: $color-main;
+  //   }
+  // }
+}
