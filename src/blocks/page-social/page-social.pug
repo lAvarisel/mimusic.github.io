@@ -21,3 +21,40 @@ mixin page-social(text, mods)
   .page-social(class=allMods)&attributes(attributes)
     .page-social__inner
       block
+
+mixin page-social-item(data, mod)
+
+  -
+    //- var thisItemClass = 'social-item';
+    var thisItemClass = 'page-social__item' + data.id + ' page-social__item--' + data.socialtype;
+    //- if(mod == 'min') {
+    //-   //- thisItemClass += '  social-item__item--min';
+    //-   thisItemClass += 'social-item__item'+data.id
+    //- }
+    //- else {
+    //-   //- thisItemClass += '  social-item__item--max';
+    //- }
+  div(class=thisItemClass)
+    if(mod == 'min')
+      a.page-social__itemTitle(href=data.link, target="_blank")= data.title
+      if(data.socialtype == 'youtube')
+        img.page-social__itemLogo(src="./img/page-social-youtube.png", alt="")
+      else if(data.socialtype == 'tvitter')
+        img.page-social__itemLogo(src="./img/page-social-twitter.png", alt="")
+      else 
+        img.page-social__itemLogo(src="./img/page-social-facebook.png", alt="")
+      span.page-social__itemName= data.name
+      span.page-social__itemDate= data.date
+    else
+      img(src=data.image, alt="")
+      .page-social__itemInner
+        p.page-social__text= data.text
+          a.page-social__link(href="" target="_blank")= data.link
+        if(data.socialtype == 'youtube')
+          img.page-social__itemLogo(src="./img/page-social-youtube.png", alt="")
+        else if(data.socialtype == 'twitter')
+          img.page-social__itemLogo(src="./img/page-social-twitter.png", alt="")
+        else 
+          img.page-social__itemLogoo(src="./img/page-social-facebook.png", alt="")
+        span.page-social__itemName= data.name
+        span.page-social__itemDate= data.date

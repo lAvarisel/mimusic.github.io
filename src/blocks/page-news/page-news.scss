@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока page-news, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+@import "../../js/slick/slick.scss";
+@import "../../js/slick/slick-theme.scss";
+
+.page-news {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background-image: url('../img/bg-page-news.png');
+  background-position: center;
+  background-size: cover;
+
+  &__inner {
+    max-width: 1165px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

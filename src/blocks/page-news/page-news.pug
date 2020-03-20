@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (page-news)
+
+mixin page-news(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +page-news('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' page-news--' + modsList[i].trim();
+      }
+    }
+
+  .page-news(class=allMods)&attributes(attributes)
+    .page-news__inner
+      block

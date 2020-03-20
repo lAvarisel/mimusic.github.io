@@ -106,7 +106,7 @@ block content
           +btn('', 'album__bigbtn_2')
             img(src='img/album-play-btn.png', alt='Play button')
           img.album__logo(src="./img/logo.png", alt="logo image")
-          +btn('View all live dates ::', 'album__btns_viewAll')
+          +btn('View all albums ::', 'album__btns_viewAll')
         .album__column_3
           +btn('', 'album__smallbtn_2')
             img(src='img/album-play-btn.png', alt='Play button')
@@ -114,11 +114,75 @@ block content
           .album__rectangle4
           .album__circle1
           .album__circle2
-  +page-social()
-    .social__column
-
-      
-
+      .album__circle3
+      .album__circle4
+      .album__circle5
+      .album__circle6
+  +page-social()       
+    .page-social__nav
+      h2.page-social__title Being Social
+        span ::
+      img.page-social__rectangle(src='img/rectangle.jpg', alt='decorate')
+      ul.page-social__list
+        li.page-social__listItem
+          a(class='page-social__listLink page-social__listLink--active', href="#") all
+        li.page-social__listItem
+          a.page-social__listLink(href="#") facebook
+        li.page-social__listItem
+          a.page-social__listLink(href="#") twitter
+        li.page-social__listItem
+          a.page-social__listLink(href="#") youtube
+        li.page-social__listItem
+          a.page-social__listLink(href="#") instagram
+    +page-social-item({
+      id: '1',
+      title: 'Allan Walker - All Falls Downs (MI Music Remix)',
+      link: 'https://www.youtube.com/watch?v=6RLLOEzdxsM',
+      socialtype: 'youtube',
+      name: 'MI MUSIC',
+      date: '10 Jan 2018',
+    }, 'min')
+    +page-social-item({
+      id: '2',
+      image: './img/page-social-image-1.png',
+      text: 'Customers make decisions in seconds. How the right tools & data can #MakeItAnExperience in the moments that matter: ',
+      socialtype: 'facebook',
+      link: 'https://adobe.ly/2CY2Tx3',
+      name: 'MI MUSIC',
+      date: '10 Jan 2018',
+    })
+    +page-social-item({
+      id: '3',
+      image: './img/page-social-image-2.png',
+      text: 'Customers make decisions in seconds. How the right tools & data can #MakeItAnExperience in the moments that matter: ',
+      socialtype: 'twitter',
+      link: 'https://adobe.ly/2CY2Tx3',
+      name: 'MI MUSIC',
+      date: '10 Jan 2018',
+    })
+    +page-social-item({
+      id: '4',
+      title: 'Allan Walker - All Falls Downs (MI Music Remix)',
+      link: 'https://www.youtube.com/watch?v=6RLLOEzdxsM',
+      socialtype: 'youtube',
+      name: 'MI MUSIC',
+      date: '10 Jan 2018',
+    }, 'min')
+  +page-news()
+    .page-news__item
+      span.page-news__prefix EXCLUSIVE
+      h2.page-news__title Pete talks about live on tour
+      img.page-news__rectangle(src='img/rectangle.jpg', alt='decorate')
+      span.page-news__date JAN 20, 2018
+      p.page-news__content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      +btn('BUY TICKETS', 'page-news__btn')
+    .page-news__item
+      span.page-news__prefix EXCLUSIVE
+      h2.page-news__title Pete talks about live on tour
+      img.page-news__rectangle(src='img/rectangle.jpg', alt='decorate')
+      span.page-news__date JAN 20, 2018
+      p.page-news__content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      +btn('BUY TICKETS', 'page-news__btn')
 
 
 //- block footer
