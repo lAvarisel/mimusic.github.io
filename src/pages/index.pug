@@ -171,26 +171,31 @@ block content
   +page-news()
     ul.page-news__list
       +page-news-item({
+        id: '1',
         date: '20 jan, 2018',
         title: "Uk Gambling Crisis - Who's To Blame?",
         content: 'Sometimes there is a news story that has a power that reaches beyond the material facts...',
       })
       +page-news-item({
+        id: '2',
         date: '20 jan, 2018',
         title: 'Pete talks about live on tour',
         content: 'Sometimes there is a news story that has a power that reaches beyond the material facts...',
       }, 'active')
       +page-news-item({
+        id: '3',
         date: '20 jan, 2018',
         title: "Uk Gambling Crisis - Who's To Blame?",
         content: 'Sometimes there is a news story that has a power that reaches beyond the material facts...',
       })
       +page-news-item({
+        id: '4',
         date: '20 jan, 2018',
         title: "Uk Gambling Crisis - Who's To Blame?",
         content: 'Sometimes there is a news story that has a power that reaches beyond the material facts...',
       })
-      
+      .page-news__item
+        a(class='page-news__link' href='/') View all latest news ::
       
     div(class='page-news__slider' id='slider')
         +page-news-sliderItem({

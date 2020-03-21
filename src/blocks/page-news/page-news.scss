@@ -37,7 +37,8 @@
   }
   &__slider {
     display: flex;
-    width: 510px;
+    max-width: 600px;
+    width: 100%;
     margin-left: 95px;
   }
   &__item {
@@ -49,11 +50,18 @@
     background-color: rgba(2, 104, 180, .9); 
   }
   &__item:first-child {
-    background-color: rgba(72, 187, 168, .7);
     border-radius: 8px 8px 0 0;
   }
   &__item:last-child {
-    background-color: rgba(2, 104, 180, .7);
+    border-radius: 0 0 8px 8px;
+  }
+  &__item:first-child,
+  &__item:last-child {
+    // background-color: rgba(2, 104, 180, .7);
+    background-color: rgba(72, 187, 168, .7);
+  }
+  &__item:nth-child(3) {
+    background-color: rgba(2, 104, 180, .6);
   }
   &__item &__itemDate,
   &__item &__itemContent {
@@ -63,26 +71,8 @@
   &__item--active &__itemContent {
     display: block;
   }
-  &__item--active {
-    padding-right: 75px;
-    padding-left: 70px;
-    padding-top: 49px;
-    padding-bottom: 50px;
-    background-color: #032c9e;
-    position: relative;
-    height: 218px;
-  }
   &__item--active &__itemTitle {
     font-size: 22px;
-  }
-  &__item--active::before {
-    content: '';
-    top: 0px;
-    left: -8px;
-    position: absolute;
-    width: 8px;
-    height: 218px;
-    background-color: #6aff7f;
   }
   &__prefix {
     font-family: Barlow-Bold;
@@ -98,15 +88,14 @@
     font-size: 60px;
     text-align: left;
     color: #fff;
-    margin-top: 40px;
+    margin-top: 20px;
   }
-  &__rectangle,
-  &__date,
-  &__content {
+  &__date {
     margin-top: 50px;
   }
   &__rectangle {
     width: 146px;
+    margin-top: 40px;
     margin-bottom: 50px;
   }
   &__date {
@@ -119,6 +108,8 @@
     margin-top: 50px;
   }
   &__content {
+    margin: 0;
+    margin-top: 37px;
     font-family: Roboto;
     line-height: 1.67;
     font-size: 18px;
@@ -158,6 +149,25 @@
     line-height: 1.5;
     text-align: left;
     color: #5882f5;
+  }
+  &__item--active::before {
+    content: '';
+    top: 0px;
+    left: -8px;
+    position: absolute;
+    width: 8px;
+    height: 218px;
+    background-color: #6aff7f;
+  }
+  &__item.page-news__item--active {
+    padding-right: 75px;
+    padding-left: 70px;
+    padding-top: 49px;
+    padding-bottom: 50px;
+    background-color: #032c9e;
+    position: relative;
+    height: 218px;
+    transition: .5s;
   }
   .presentation {
   }

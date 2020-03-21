@@ -36,11 +36,12 @@ mixin page-news-item(data, mod)
 
   -
     let thisItemClass = 'page-news__item';
+    let thisItemId = 'slick-slide-control0' + data.id;
     if(mod == 'active') {
       thisItemClass += '  page-news__item--active';
     }
   
-  li(class= thisItemClass)
+  li(class= thisItemClass id=thisItemId)
     span.page-news__itemDate= data.date
     h2.page-news__itemTitle= data.title
     p.page-news__itemContent= data.content
