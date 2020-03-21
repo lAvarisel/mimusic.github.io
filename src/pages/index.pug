@@ -169,20 +169,92 @@ block content
       date: '10 Jan 2018',
     }, 'min')
   +page-news()
-    .page-news__item
-      span.page-news__prefix EXCLUSIVE
-      h2.page-news__title Pete talks about live on tour
-      img.page-news__rectangle(src='img/rectangle.jpg', alt='decorate')
-      span.page-news__date JAN 20, 2018
-      p.page-news__content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      +btn('BUY TICKETS', 'page-news__btn')
-    .page-news__item
-      span.page-news__prefix EXCLUSIVE
-      h2.page-news__title Pete talks about live on tour
-      img.page-news__rectangle(src='img/rectangle.jpg', alt='decorate')
-      span.page-news__date JAN 20, 2018
-      p.page-news__content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      +btn('BUY TICKETS', 'page-news__btn')
+    ul.page-news__list
+      +page-news-item({
+        date: '20 jan, 2018',
+        title: "Uk Gambling Crisis - Who's To Blame?",
+        content: 'Sometimes there is a news story that has a power that reaches beyond the material facts...',
+      })
+      +page-news-item({
+        date: '20 jan, 2018',
+        title: 'Pete talks about live on tour',
+        content: 'Sometimes there is a news story that has a power that reaches beyond the material facts...',
+      }, 'active')
+      +page-news-item({
+        date: '20 jan, 2018',
+        title: "Uk Gambling Crisis - Who's To Blame?",
+        content: 'Sometimes there is a news story that has a power that reaches beyond the material facts...',
+      })
+      +page-news-item({
+        date: '20 jan, 2018',
+        title: "Uk Gambling Crisis - Who's To Blame?",
+        content: 'Sometimes there is a news story that has a power that reaches beyond the material facts...',
+      })
+      
+      
+    div(class='page-news__slider' id='slider')
+        +page-news-sliderItem({
+          prefix: 'EXCLUSIVE',
+          title: 'Pete talks about live on tour',
+          rectangle: 'img/rectangle.jpg',
+          date: 'JAN 20, 2018',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        })
+        +page-news-sliderItem({
+          prefix: 'EXCLUSIVE',
+          title: 'Pete talks about live on tour',
+          rectangle: 'img/rectangle.jpg',
+          date: 'JAN 20, 2018',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        })
+        +page-news-sliderItem({
+          prefix: 'EXCLUSIVE',
+          title: 'Pete talks about live on tour',
+          rectangle: 'img/rectangle.jpg',
+          date: 'JAN 20, 2018',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        })
+        +page-news-sliderItem({
+          prefix: 'EXCLUSIVE',
+          title: 'Pete talks about live on tour',
+          rectangle: 'img/rectangle.jpg',
+          date: 'JAN 20, 2018',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        })
+    
+    
+    
+    //- .div(class='.page-news__content' id='solidorion')
+    //-   .div(class='.page-news__slider' id='slider')
+    //-     +page-news-sliderItem({
+    //-       prefix: 'EXCLUSIVE',
+    //-       title: 'Pete talks about live on tour',
+    //-       rectangle: 'img/rectangle.jpg',
+    //-       date: 'JAN 20, 2018',
+    //-       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    //-     })
+    //-     +page-news-sliderItem({
+    //-       prefix: 'EXCLUSIVE',
+    //-       title: 'Pete talks about live on tour',
+    //-       rectangle: 'img/rectangle.jpg',
+    //-       date: 'JAN 20, 2018',
+    //-       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    //-     })
+    //-     +page-news-sliderItem({
+    //-       prefix: 'EXCLUSIVE',
+    //-       title: 'Pete talks about live on tour',
+    //-       rectangle: 'img/rectangle.jpg',
+    //-       date: 'JAN 20, 2018',
+    //-       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    //-     })
+    //-     +page-news-sliderItem({
+    //-       prefix: 'EXCLUSIVE',
+    //-       title: 'Pete talks about live on tour',
+    //-       rectangle: 'img/rectangle.jpg',
+    //-       date: 'JAN 20, 2018',
+    //-       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    //-     })
+    //-   +page-news-accordion()
 
 
 //- block footer

@@ -1,4 +1,4 @@
-const $ = require('./jquery-3.4.1.min.js');
+import $ from 'jquery';
 
 // const $ = require('jquery');
 // $( document ).ready(function() {});

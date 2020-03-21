@@ -1,15 +1,16 @@
-// const $ = require('../../js/jquery-3.4.1.min.js');
-// require('slick-carousel');
+import $ from 'jquery';
+import 'slick-carousel';
 
-// $( document ).ready(function(){
-//     $('.page-news__inner').slick({
-//         dots: true
-//     });
-//     // $('.page-news__inner').addClass('работает');
-
-// });
-
-// $(".page-news__inner").addClass('работает');
-// $(function(){
-//     $('.page-news__inner').addClass('работает');
-// });
+$(document).ready(function(){
+    $('.page-news__slider').slick({
+        arrows: false,
+        // dots: true,
+        vertical: true,
+        verticalSwiping: true,
+        // dotsClass: 'page-news__list'
+        // customPaging : function(slider, i) {
+        //     var thumb = $(slider.$slides[i]).data('thumb');
+        // return '<div class="dot-play"><p class="play-title">У меня в этот момент три очка сжалось</p><div class="descr-play-dot"><p>Рассмеши комика</p><p>08:49</p></div>';
+//         // }
+    });
+});

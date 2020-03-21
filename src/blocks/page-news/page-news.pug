@@ -21,3 +21,27 @@ mixin page-news(text, mods)
   .page-news(class=allMods)&attributes(attributes)
     .page-news__inner
       block
+
+mixin page-news-sliderItem(data)
+
+  .page-news__sliderItem
+    span.page-news__prefix= data.prefix
+    h2.page-news__title= data.title
+    img.page-news__rectangle(src=data.rectangle, alt='decorate')
+    span.page-news__date= data.date
+    p.page-news__content= data.content
+    +btn('BUY TICKETS', 'page-news__btn')
+
+mixin page-news-item(data, mod)
+
+  -
+    let thisItemClass = 'page-news__item';
+    if(mod == 'active') {
+      thisItemClass += '  page-news__item--active';
+    }
+  
+  li(class= thisItemClass)
+    span.page-news__itemDate= data.date
+    h2.page-news__itemTitle= data.title
+    p.page-news__itemContent= data.content
+

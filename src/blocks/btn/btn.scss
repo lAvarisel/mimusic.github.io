@@ -82,7 +82,8 @@
   }
   &--page-slides__btns_find:hover,
   &--page-slides__btns_play:hover,
-  &--livedates__btns_find:hover {
+  &--livedates__btns_find:hover,
+  &--page-news__btn:hover {
     background-color: #012572;
     color: #fff;
   }
@@ -191,6 +192,20 @@
   }
   &--album__bigbtn_2:hover {
     background-image: linear-gradient(rgba(27, 37, 80,.6), rgba(27, 37, 80,.6)), url('../img/album2.png');
+  }
+  &--page-news__btn {
+    margin-top: 40px;
+    padding: 0;
+    color: #fff;
+    width: 200px;
+    height: 64px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    background-color: transparent;
+    // line-height: 2.14;
+    letter-spacing: 2.8px;
+    text-align: center;
+    font-family: Barlow-Bold;
+    font-size: 14px;
   }
 
   // &__icon {
