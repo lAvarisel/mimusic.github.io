@@ -3,10 +3,17 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .pagination {
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   margin-top: $typo-margin-vertical;
   margin-bottom: $typo-margin-vertical;
+  top: calc(100vh/2);
+  right: 0;
+  z-index: 35;
+  flex-direction: column;
+  // opacity: 0.5;
+  // background-color: #fff;
 
   &__item {
     display: block;

@@ -105,6 +105,11 @@
     }
     &__link:hover {
         color: #fff;
+        fill: #fff;
+    }
+    &__linkInner:hover {
+        color: #fff;
+        fill: #fff;
     }
     &__social {
         list-style: none;
@@ -126,5 +131,9 @@
     }
     &__img:hover {
         color: #fff;
+        fill: #fff;
+    }
+    &__svg {
+        width: 16px;
     }
 }
