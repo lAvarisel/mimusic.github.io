@@ -7,7 +7,7 @@
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: $typo-margin-vertical;
+  margin-bottom: 30px;
 
   &__name {
     @include field-name;
@@ -27,6 +27,19 @@
       min-height: calc(#{$textarea-height} + 2px);
       resize: vertical;
     }
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+    width: 400px;
+    height: 55px;
+  }
+  &__input::-webkit-input-placeholder { 
+    color: #fff; 
+    text-transform: uppercase;
+  }
+  &__input:hover {
+    border: 1px solid rgba(255, 255, 255, .5);
   }
 
   &__help-text {

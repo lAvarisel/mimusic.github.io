@@ -1,5 +1,130 @@
 // В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+@font-face {
+    font-family: 'Barlow-SemiBold';
+    src: url('../fonts/Barlow-SemiBold.otf')
+}
+@font-face {
+    font-family: 'Barlow-Bold';
+    src: url('../fonts/Barlow-Bold.otf')
+  }
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto.ttf')
+  }
+.page-footer {
+    background-image: url('../img/page-footer-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    margin-top: -570px;
+    position: relative;
+    z-index: 0;
 
-.page-footer {}
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 685px;
+        padding-bottom: 95px;
+    }
+    &__title {
+        font-family: Barlow-SemiBold;
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 0.32;
+        text-align: center;
+        color: #fff;
+    }
+    &__rectangle {
+        width: 146px;
+        height: 4px;
+        margin-top: 24px;
+    }
+    &__subtitle {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+        color: #778fc3;
+        margin-top: 28px;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        padding: 0;
+        margin: 0;
+        margin-top: 208px;
+    }
+    &__logoBack {
+        width: 76px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #032c9e;
+    }
+    &__logo--name,
+    &__logo--subname {
+        padding: 0;
+        margin: 0;
+        letter-spacing: 9px;
+        font-size: 36px;
+        font-family: Barlow-Bold;
+    }
+    &__logo--name {
+        padding-left: 12px;
+    }
+    &__logo--subname {
+        margin-left: 15px;
+    }
+    &__nav {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        margin-top: 67px;
+        list-style: none;
+    }
+    &__item {
+        margin-left: 55px;
+        cursor: pointer;
+    }
+    &__item:first-child {
+        margin: 0;
+    }
+    &__link {
+        font-family: Barlow-Bold;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 0.86;
+        letter-spacing: 2.1px;
+        text-align: center;
+        color: #48547c;
+    }
+    &__link:hover {
+        color: #fff;
+    }
+    &__social {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 37px;
+    }
+    &__socitem {
+        margin-left: 15px;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+    &__img {
+        width: 16px;
+        color: #48547c;
+    }
+    &__img:hover {
+        color: #fff;
+    }
+}

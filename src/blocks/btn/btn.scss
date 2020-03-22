@@ -83,7 +83,8 @@
   &--page-slides__btns_find:hover,
   &--page-slides__btns_play:hover,
   &--livedates__btns_find:hover,
-  &--page-news__btn:hover {
+  &--page-news__btn:hover,
+  &--field-actions__btn:hover {
     background-color: #012572;
     color: #fff;
   }
@@ -120,7 +121,8 @@
     cursor: default;
   }
   &--livedates__btns_viewAll,
-  &--album__btns_viewAll {
+  &--album__btns_viewAll,
+  &--page-news__btn_viewAll {
     font-family: Barlow-Medium;
     font-size: 18px;
     color: #fff;
@@ -131,7 +133,8 @@
     margin-top: 10px;
   }
   &--livedates__btns_viewAll:hover,
-  &--album__btns_viewAll:hover {
+  &--album__btns_viewAll:hover,
+  &--page-news__btn_viewAll:hover {
     box-shadow: 0px 3px 40px 0 rgba(16, 41, 112, 0.2);
     background-color: #032c9e;
   }
@@ -194,7 +197,7 @@
     background-image: linear-gradient(rgba(27, 37, 80,.6), rgba(27, 37, 80,.6)), url('../img/album2.png');
   }
   &--page-news__btn {
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 0;
     color: #fff;
     width: 200px;
@@ -206,6 +209,21 @@
     text-align: center;
     font-family: Barlow-Bold;
     font-size: 14px;
+  }
+  &--field-actions__btn {
+    margin-top: 0px;
+    padding: 0;
+    color: #fff;
+    width: 400px;
+    height: 64px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    background-color: transparent;
+    // line-height: 2.14;
+    letter-spacing: 2.8px;
+    text-align: center;
+    font-family: Barlow-Bold;
+    font-size: 14px;
+    text-transform: uppercase;
   }
 
   // &__icon {

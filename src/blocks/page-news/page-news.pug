@@ -22,9 +22,16 @@ mixin page-news(text, mods)
     .page-news__inner
       block
 
-mixin page-news-sliderItem(data)
+mixin page-news-sliderItem(data, mod)
 
-  .page-news__sliderItem
+  -
+    let thisItemClass = 'page-news__sliderItem';
+    let thisItemId = 'page-news__sliderItem_' + data.id;
+    if(mod == 'active') {
+      thisItemClass += '  page-news__sliderItem--active';
+    }
+
+  div(class=thisItemClass id= thisItemId)
     span.page-news__prefix= data.prefix
     h2.page-news__title= data.title
     img.page-news__rectangle(src=data.rectangle, alt='decorate')
@@ -36,7 +43,7 @@ mixin page-news-item(data, mod)
 
   -
     let thisItemClass = 'page-news__item';
-    let thisItemId = 'slick-slide-control0' + data.id;
+    let thisItemId = 'page-news__item_' + data.id;
     if(mod == 'active') {
       thisItemClass += '  page-news__item--active';
     }

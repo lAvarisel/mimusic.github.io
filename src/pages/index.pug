@@ -194,11 +194,15 @@ block content
         title: "Uk Gambling Crisis - Who's To Blame?",
         content: 'Sometimes there is a news story that has a power that reaches beyond the material facts...',
       })
-      .page-news__item
-        a(class='page-news__link' href='/') View all latest news ::
+      .page-news__item 
+        .page-news__btninner
+          +btn('View all latest news ::', 'page-news__btn_viewAll')
+          img.page-news__arroyRight(src="img/right.png", alt="")
+        //- a(class='page-news__link' href='/') View all latest news ::
       
     div(class='page-news__slider' id='slider')
         +page-news-sliderItem({
+          id: '1',
           prefix: 'EXCLUSIVE',
           title: 'Pete talks about live on tour',
           rectangle: 'img/rectangle.jpg',
@@ -206,6 +210,15 @@ block content
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         })
         +page-news-sliderItem({
+          id: '2',
+          prefix: 'EXCLUSIVE',
+          title: 'Pete talks about live on tour',
+          rectangle: 'img/rectangle.jpg',
+          date: 'JAN 20, 2018',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        }, 'active')
+        +page-news-sliderItem({
+          id: '3',
           prefix: 'EXCLUSIVE',
           title: 'Pete talks about live on tour',
           rectangle: 'img/rectangle.jpg',
@@ -213,57 +226,61 @@ block content
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         })
         +page-news-sliderItem({
+          id: '4',
           prefix: 'EXCLUSIVE',
           title: 'Pete talks about live on tour',
           rectangle: 'img/rectangle.jpg',
           date: 'JAN 20, 2018',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         })
-        +page-news-sliderItem({
-          prefix: 'EXCLUSIVE',
-          title: 'Pete talks about live on tour',
-          rectangle: 'img/rectangle.jpg',
-          date: 'JAN 20, 2018',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-        })
-    
-    
-    
-    //- .div(class='.page-news__content' id='solidorion')
-    //-   .div(class='.page-news__slider' id='slider')
-    //-     +page-news-sliderItem({
-    //-       prefix: 'EXCLUSIVE',
-    //-       title: 'Pete talks about live on tour',
-    //-       rectangle: 'img/rectangle.jpg',
-    //-       date: 'JAN 20, 2018',
-    //-       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-    //-     })
-    //-     +page-news-sliderItem({
-    //-       prefix: 'EXCLUSIVE',
-    //-       title: 'Pete talks about live on tour',
-    //-       rectangle: 'img/rectangle.jpg',
-    //-       date: 'JAN 20, 2018',
-    //-       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-    //-     })
-    //-     +page-news-sliderItem({
-    //-       prefix: 'EXCLUSIVE',
-    //-       title: 'Pete talks about live on tour',
-    //-       rectangle: 'img/rectangle.jpg',
-    //-       date: 'JAN 20, 2018',
-    //-       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-    //-     })
-    //-     +page-news-sliderItem({
-    //-       prefix: 'EXCLUSIVE',
-    //-       title: 'Pete talks about live on tour',
-    //-       rectangle: 'img/rectangle.jpg',
-    //-       date: 'JAN 20, 2018',
-    //-       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-    //-     })
-    //-   +page-news-accordion()
 
+block footer
+  h3.page-footer__title Sign Up For Exclusives
+  img.page-footer__rectangle(src="img/rectangle.jpg", alt="decorate")
+  span.page-footer__subtitle Sign up for latest news, exclusive offers and ticket pre-sales.
+  //- form(action="")
+  +form()
+    +field-text({
+      attrs: {placeholder: 'NAME'}
+    })
+    +field-text({
+      attrs: {
+        placeholder: 'email',
+        type: 'email',
+        require: true,
+        'data-check-pattern': '[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?'}
+    })
+    +field-actions()
+      +btn('sign up now', 'field-actions__btn')(type="submit")
+  .page-footer__logo
+    .page-footer__logoBack
+      p.page-footer__logo.page-footer__logo--name MI
+    p.page-footer__logo.page-footer__logo--subname MUSIC.
+  ul.page-footer__nav
+    li.page-footer__item
+      a.page-footer__link HOME
+    li.page-footer__item
+      a.page-footer__link LIVE
+    li.page-footer__item
+      a.page-footer__link ALBUMS
+    li.page-footer__item
+      a.page-footer__link NEWS
+    li.page-footer__item
+      a.page-footer__link ABOUT
+  ul.page-footer__social
+    li.page-footer__socitem
+      a.page-footer__link
+        img.page-footer__img(src="./img/facebook-square-brands.svg", alt="facebook icon")
+    li.page-footer__socitem
+      a.page-footer__link
+        img.page-footer__img(src="./img/twitter-brands.svg", alt="twitter icon")
+    li.page-footer__socitem
+      a.page-footer__link
+        img.page-footer__img(src="./img/instagram-brands.svg", alt="instagram icon")
+    li.page-footer__socitem
+      a.page-footer__link
+        img.page-footer__img(src="./img/youtube-brands.svg", alt="youtube icon")
 
-//- block footer
-//-   p footer
 
 //- block append page-bottom
 //-   script(src='js/some.js')
