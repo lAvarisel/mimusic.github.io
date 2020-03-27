@@ -32,10 +32,10 @@ block content
       +btn('', 'page-slides__btns_play')
         img(src='img/play-btn.png', alt='Play button')
       span PLAY ALL SONGS
-  +pagination()
-    +pagination-item('1', '/1')
-    +pagination-item('2', '/2')
-    +pagination-item('3', '/3')
+  //- +pagination()
+  //-   +pagination-item('1', '/1')
+  //-   +pagination-item('2', '/2')
+  //-   +pagination-item('3', '/3')
   +album-livedates()
     +livedates()
       .livedates__title
@@ -195,10 +195,10 @@ block content
         title: "Uk Gambling Crisis - Who's To Blame?",
         content: 'Sometimes there is a news story that has a power that reaches beyond the material facts...',
       })
-      .page-news__item 
-        .page-news__btninner
-          +btn('View all latest news ::', 'page-news__btn_viewAll')
-          img.page-news__arroyRight(src="img/right.png", alt="")
+      li.page-news__item 
+        //- .page-news__btninner 
+        +btn('View all latest news ::', 'page-news__btn_viewAll')(href='/')
+        //- img.page-news__arroyRight(src="img/right.png", alt="")
         //- a(class='page-news__link' href='/') View all latest news ::
       
     div(class='page-news__slider' id='slider')
