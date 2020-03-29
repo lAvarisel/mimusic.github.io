@@ -245,6 +245,15 @@
 		opacity: 1;
 		transition: all .6s ease-in-out;
   }
+  &__circle1 {
+    position: absolute;
+    width: 196px;
+    height: 196px;
+    background-image: linear-gradient(to top, #26feff, #072293);
+    left: 62px;
+    bottom: 28px;
+    border-radius: 50%;
+  }
   @media (max-width: 1180px) {
     &__slider {
       display: none;
