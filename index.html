@@ -29,42 +29,60 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 
 <body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
   <div class="page__inner">
-    <div class="page__content">
-      <header class="page-header" role="banner">
-        <div class="page-header__inner" id="header"><a class="logo" href="/"><img src="img/logo.png" alt="Logo"></a>
-          <div class="page-header-nav">
-            <nav class="main-nav" id="nav"><button class="burger main-nav__toggler" aria-label="Показать главное меню" data-target-id="nav" data-target-class-toggle="main-nav--open"><span>Показать главное меню</span></button>
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><a class="main-nav__link" href="/">HOME</a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="/">LIVE</a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="/">ALBUMS</a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="/">NEWS</a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="/">ABOUT</a></li>
-              </ul>
-            </nav>
-            <ul class="social">
-              <li class="social__link-wrap  social__link-wrap--fb" title="Facebook"><a class="social__link" href="https://www.facebook.com/profile.php?id=100011672930358"><img src="img/facebook.png" alt=""></a></li>
-              <li class="social__link-wrap  social__link-wrap--tw" title="Twitter"><a class="social__link" href="https://www.facebook.com/profile.php?id=100011672930358"><img src="img/twitter.png" alt=""></a></li>
-              <li class="social__link-wrap  social__link-wrap--ig" title="Instagram"><a class="social__link" href="https://www.facebook.com/profile.php?id=100011672930358"><img src="img/instagram.png" alt=""></a></li>
-              <li class="social__link-wrap  social__link-wrap--yt" title="YouTube"><a class="social__link" href="https://www.facebook.com/profile.php?id=100011672930358"><img src="img/youtube.png" alt=""></a></li>
+    <header class="page-header" role="banner">
+      <div class="page-header__inner" id="header"><a class="logo" href="/"><img src="img/logo.png" alt="Logo"></a>
+        <div class="page-header__nav">
+          <nav class="main-nav" id="nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="#id_home">HOME</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#id_livedates">LIVE</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#id_albums">ALBUMS</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#id_news">NEWS</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#id_about">ABOUT</a></li>
             </ul>
-          </div>
-        </div>
-      </header>
-      <div class="page-slides">
-        <div class="page-slides__inner">
-          <div class="page-slides__title">
-            <p>NEW TOUR</p>
-          </div>
-          <h1>UNFORGETTABLE</h1>
-          <p>Live tour continues with new international dates just added</p>
-          <div class="page-slides__btns"><button class="btn  btn--page-slides__btns_find">FIND TICKETS</button><button class="btn  btn--page-slides__btns_play"><img src="img/play-btn.png" alt="Play button"></button><span>PLAY ALL SONGS</span></div>
+          </nav>
+          <ul class="social">
+            <li class="social__link-wrap  social__link-wrap--fb" title="Facebook"><a class="social__link" href="https://www.facebook.com/profile.php?id=100011672930358"><img src="img/facebook.png" alt=""></a></li>
+            <li class="social__link-wrap  social__link-wrap--tw" title="Twitter"><a class="social__link" href="https://www.facebook.com/profile.php?id=100011672930358"><img src="img/twitter.png" alt=""></a></li>
+            <li class="social__link-wrap  social__link-wrap--ig" title="Instagram"><a class="social__link" href="https://www.facebook.com/profile.php?id=100011672930358"><img src="img/instagram.png" alt=""></a></li>
+            <li class="social__link-wrap  social__link-wrap--yt" title="YouTube"><a class="social__link" href="https://www.facebook.com/profile.php?id=100011672930358"><img src="img/youtube.png" alt=""></a></li>
+          </ul>
+          <div class="main-nav__toggler" id="navToggle"></div>
         </div>
       </div>
-      <div class="pagination" aria-label="Page navigation"><a class="pagination__item" href="/1">1</a><a class="pagination__item" href="/2">2</a><a class="pagination__item" href="/3">3</a></div>
+    </header>
+    <div class="page__content">
+      <section class="page-slides" id="id_home">
+        <div class="page-slides__inner">
+          <div class="page-slides__slide">
+            <div class="page-slides__title">
+              <p>NEW TOUR</p>
+            </div>
+            <h1>UNFORGETTABLE</h1>
+            <p>Live tour continues with new international dates just added</p>
+            <div class="page-slides__btns"><button class="btn  btn--page-slides__btns_find">FIND TICKETS</button><button class="btn  btn--page-slides__btns_play"><img src="img/play-btn.png" alt="Play button"></button><span>PLAY ALL SONGS</span></div>
+          </div>
+          <div class="page-slides__slide">
+            <div class="page-slides__title">
+              <p>NEW TOUR</p>
+            </div>
+            <h1>UNFORGETTABLE</h1>
+            <p>Live tour continues with new international dates just added</p>
+            <div class="page-slides__btns"><button class="btn  btn--page-slides__btns_find">FIND TICKETS</button><button class="btn  btn--page-slides__btns_play"><img src="img/play-btn.png" alt="Play button"></button><span>PLAY ALL SONGS</span></div>
+          </div>
+          <div class="page-slides__slide">
+            <div class="page-slides__title">
+              <p>NEW TOUR</p>
+            </div>
+            <h1>UNFORGETTABLE</h1>
+            <p>Live tour continues with new international dates just added</p>
+            <div class="page-slides__btns"><button class="btn  btn--page-slides__btns_find">FIND TICKETS</button><button class="btn  btn--page-slides__btns_play"><img src="img/play-btn.png" alt="Play button"></button><span>PLAY ALL SONGS</span></div>
+          </div>
+        </div>
+      </section>
       <div class="album-livedates">
         <div class="album-livedates__inner">
-          <div class="livedates">
+          <section class="livedates" id="id_livedates">
             <div class="livedates__inner">
               <div class="livedates__title">
                 <h2>Live Dates</h2><span>::</span>
@@ -75,7 +93,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     <div class="livedates__calendar">
                       <p class="livedates__day">21</p>
                       <p class="livedates__month">jan</p>
-                    </div><img src="img/melanie-van-leeuwen.png" alt="livedate decorate image" />
+                    </div><img class="livedates__preview" src="img/melanie-van-leeuwen.png" alt="livedate decorate image" />
                     <div class="livedates__description">
                       <p class="livedates__name">Unforgettable: Live</p>
                       <p class="livedates__subtitle">Live show and albums signing</p>
@@ -93,7 +111,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     <div class="livedates__calendar">
                       <p class="livedates__day">25</p>
                       <p class="livedates__month">jan</p>
-                    </div><img src="img/john-raptis.png" alt="livedate decorate image" />
+                    </div><img class="livedates__preview" src="img/john-raptis.png" alt="livedate decorate image" />
                     <div class="livedates__description">
                       <p class="livedates__name">Unforgettable: Live</p>
                       <p class="livedates__subtitle">Live show and albums signing</p>
@@ -111,7 +129,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     <div class="livedates__calendar">
                       <p class="livedates__day">31</p>
                       <p class="livedates__month">jan</p>
-                    </div><img src="img/edward-cisneros.png" alt="livedate decorate image" />
+                    </div><img class="livedates__preview" src="img/edward-cisneros.png" alt="livedate decorate image" />
                     <div class="livedates__description">
                       <p class="livedates__name">Unforgettable: Live</p>
                       <p class="livedates__subtitle">Live show and albums signing</p>
@@ -129,7 +147,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     <div class="livedates__calendar">
                       <p class="livedates__day">9</p>
                       <p class="livedates__month">feb</p>
-                    </div><img src="img/william-white.png" alt="livedate decorate image" />
+                    </div><img class="livedates__preview" src="img/william-white.png" alt="livedate decorate image" />
                     <div class="livedates__description">
                       <p class="livedates__name">Unforgettable: Live</p>
                       <p class="livedates__subtitle">Live show and albums signing</p>
@@ -147,7 +165,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     <div class="livedates__calendar">
                       <p class="livedates__day">13</p>
                       <p class="livedates__month">feb</p>
-                    </div><img src="img/maelle-ramsay.png" alt="livedate decorate image" />
+                    </div><img class="livedates__preview" src="img/maelle-ramsay.png" alt="livedate decorate image" />
                     <div class="livedates__description">
                       <p class="livedates__name">Unforgettable: Live</p>
                       <p class="livedates__subtitle">Live show and albums signing</p>
@@ -162,8 +180,8 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 </li>
               </ul><button class="btn  btn--livedates__btns_viewAll">View all live dates ::</button>
             </div>
-          </div>
-          <div class="album">
+          </section>
+          <section class="album" id="id_albums">
             <div class="album__inner">
               <div class="album__title">
                 <h2 class="album__titleName">Listen to MIMUSIC </h2><img class="album__rectangle" src="img/rectangle-album.png" alt="decorate image">
@@ -187,10 +205,10 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <div class="album__circle5"></div>
               <div class="album__circle6"></div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
-      <div class="page-social">
+      <section class="page-social">
         <div class="page-social__inner">
           <div class="page-social__nav">
             <h2 class="page-social__title">Being Social<span>::</span></h2><img class="page-social__rectangle" src="img/rectangle.jpg" alt="decorate">
@@ -215,29 +233,23 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
           </div>
           <div class="page-social__item4 page-social__item--youtube"><a class="page-social__itemTitle" href="https://www.youtube.com/watch?v=6RLLOEzdxsM" target="_blank">Allan Walker - All Falls Downs (MI Music Remix)</a><img class="page-social__itemLogo" src="./img/page-social-youtube.png" alt="" /><span class="page-social__itemName">MI MUSIC</span><span class="page-social__itemDate">10 Jan 2018</span></div>
         </div>
-      </div>
-      <div class="page-news">
+      </section>
+      <section class="page-news" id="id_news">
         <div class="page-news__inner">
           <ul class="page-news__list">
             <li class="page-news__item" id="page-news__item_1"><span class="page-news__itemDate">20 jan, 2018</span>
               <h2 class="page-news__itemTitle">Uk Gambling Crisis - Who's To Blame?</h2>
-              <p class="page-news__itemContent">Sometimes there is a news story that has a power that reaches beyond the material facts...</p>
-            </li>
+              <p class="page-news__itemContent">Sometimes there is a news story that has a power that reaches beyond the material facts...</p><button class="btn  btn--page-news__btn page-news__btn_mobile">BUY TICKETS</button></li>
             <li class="page-news__item  page-news__item--active" id="page-news__item_2"><span class="page-news__itemDate">20 jan, 2018</span>
               <h2 class="page-news__itemTitle">Pete talks about live on tour</h2>
-              <p class="page-news__itemContent">Sometimes there is a news story that has a power that reaches beyond the material facts...</p>
-            </li>
+              <p class="page-news__itemContent">Sometimes there is a news story that has a power that reaches beyond the material facts...</p><button class="btn  btn--page-news__btn page-news__btn_mobile">BUY TICKETS</button></li>
             <li class="page-news__item" id="page-news__item_3"><span class="page-news__itemDate">20 jan, 2018</span>
               <h2 class="page-news__itemTitle">Uk Gambling Crisis - Who's To Blame?</h2>
-              <p class="page-news__itemContent">Sometimes there is a news story that has a power that reaches beyond the material facts...</p>
-            </li>
+              <p class="page-news__itemContent">Sometimes there is a news story that has a power that reaches beyond the material facts...</p><button class="btn  btn--page-news__btn page-news__btn_mobile">BUY TICKETS</button></li>
             <li class="page-news__item" id="page-news__item_4"><span class="page-news__itemDate">20 jan, 2018</span>
               <h2 class="page-news__itemTitle">Uk Gambling Crisis - Who's To Blame?</h2>
-              <p class="page-news__itemContent">Sometimes there is a news story that has a power that reaches beyond the material facts...</p>
-            </li>
-            <div class="page-news__item">
-              <div class="page-news__btninner"><button class="btn  btn--page-news__btn_viewAll">View all latest news ::</button><img class="page-news__arroyRight" src="img/right.png" alt=""></div>
-            </div>
+              <p class="page-news__itemContent">Sometimes there is a news story that has a power that reaches beyond the material facts...</p><button class="btn  btn--page-news__btn page-news__btn_mobile">BUY TICKETS</button></li>
+            <li class="page-news__item"> <a class="btn  btn--page-news__btn_viewAll" href="/">View all latest news ::</a></li>
           </ul>
           <div class="page-news__slider" id="slider">
             <div class="page-news__sliderItem" id="page-news__sliderItem_1"><span class="page-news__prefix">EXCLUSIVE</span>
@@ -254,10 +266,10 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <p class="page-news__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><button class="btn  btn--page-news__btn">BUY TICKETS</button></div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
     <div class="page__footer-wrapper">
-      <footer class="page-footer" role="contentinfo">
+      <footer class="page-footer" role="contentinfo" id="id_about">
         <div class="page-footer__inner">
           <h3 class="page-footer__title">Sign Up For Exclusives</h3><img class="page-footer__rectangle" src="img/rectangle.jpg" alt="decorate"><span class="page-footer__subtitle">Sign up for latest news, exclusive offers and ticket pre-sales.</span>
           <form class="form"><label class="field-text"><span class="field-text__input-wrap"><input class="field-text__input" type="text" placeholder="NAME"/></span></label><label class="field-text"><span class="field-text__input-wrap"><input class="field-text__input" type="email" placeholder="email" require="require" data-check-pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"/></span></label>

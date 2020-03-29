@@ -29,25 +29,25 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 
 <body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
   <div class="page__inner">
+    <header class="page-header" role="banner">
+      <div class="page-header__inner" id="header"><a class="logo" href="/"><img src="img/logo.png" alt="Logo"></a>
+        <nav class="main-nav" id="nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="#id_home">HOME</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#id_livedates">LIVE</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#id_albums">ALBUMS</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#id_news">NEWS</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#id_about">ABOUT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="page__content">
-      <header class="page-header" role="banner">
-        <div class="page-header__inner" id="header"><a class="logo" href="/"><img src="img/logo.png" alt="Logo"></a>
-          <nav class="main-nav" id="nav"><button class="burger main-nav__toggler" aria-label="Показать главное меню" data-target-id="nav" data-target-class-toggle="main-nav--open"><span>Показать главное меню</span></button>
-            <ul class="main-nav__list">
-              <li class="main-nav__item"><a class="main-nav__link" href="/">HOME</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="/">LIVE</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="/">ALBUMS</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="/">NEWS</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="/">ABOUT</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
       <h1>Error 404</h1>
       <p>Page not found.</p>
     </div>
     <div class="page__footer-wrapper">
-      <footer class="page-footer" role="contentinfo">
+      <footer class="page-footer" role="contentinfo" id="id_about">
         <div class="page-footer__inner">
           <p>«Подвал»</p>
           <p>Контактный телефон: <a href="tel:+70000000000">+7 000 000 00 00</a></p>
