@@ -9,7 +9,7 @@ block meta
 //-   link(rel='stylesheet', href='css/some.css')
 
 block nav
-  .page-header-nav
+  .page-header__nav
     +main-nav('10')
     +social()
       +social-link('https://www.facebook.com/profile.php?id=100011672930358', 'fb')(title='Facebook')
@@ -20,24 +20,43 @@ block nav
         img(src="img/instagram.png", alt="")
       +social-link('https://www.facebook.com/profile.php?id=100011672930358', 'yt')(title='YouTube')
         img(src="img/youtube.png", alt="")
+    div(class='main-nav__toggler' id = 'navToggle')
+    //- +burger()(id='navToggle')
 
 block content
-  +page-slides()
-    .page-slides__title
-      p NEW TOUR
-    h1 UNFORGETTABLE
-    p Live tour continues with new international dates just added
-    .page-slides__btns
-      +btn('FIND TICKETS', 'page-slides__btns_find')
-      +btn('', 'page-slides__btns_play')
-        img(src='img/play-btn.png', alt='Play button')
-      span PLAY ALL SONGS
-  //- +pagination()
-  //-   +pagination-item('1', '/1')
-  //-   +pagination-item('2', '/2')
-  //-   +pagination-item('3', '/3')
+  +page-slides()(id='id_home')
+    .page-slides__slide
+      .page-slides__title
+        p NEW TOUR
+      h1 UNFORGETTABLE
+      p Live tour continues with new international dates just added
+      .page-slides__btns
+        +btn('FIND TICKETS', 'page-slides__btns_find')
+        +btn('', 'page-slides__btns_play')
+          img(src='img/play-btn.png', alt='Play button')
+        span PLAY ALL SONGS
+    .page-slides__slide
+      .page-slides__title
+        p NEW TOUR
+      h1 UNFORGETTABLE
+      p Live tour continues with new international dates just added
+      .page-slides__btns
+        +btn('FIND TICKETS', 'page-slides__btns_find')
+        +btn('', 'page-slides__btns_play')
+          img(src='img/play-btn.png', alt='Play button')
+        span PLAY ALL SONGS
+    .page-slides__slide
+      .page-slides__title
+        p NEW TOUR
+      h1 UNFORGETTABLE
+      p Live tour continues with new international dates just added
+      .page-slides__btns
+        +btn('FIND TICKETS', 'page-slides__btns_find')
+        +btn('', 'page-slides__btns_play')
+          img(src='img/play-btn.png', alt='Play button')
+        span PLAY ALL SONGS
   +album-livedates()
-    +livedates()
+    +livedates()(id='id_livedates')
       .livedates__title
         h2 Live Dates
         span ::
@@ -89,7 +108,7 @@ block content
           time: '8 : 30 PM',
         })
       +btn('View all live dates ::', 'livedates__btns_viewAll')
-    +album()
+    +album()(id='id_albums')
       .album__title
         h2.album__titleName Listen to MIMUSIC 
         img.album__rectangle(src='img/rectangle-album.png', alt='decorate image')
@@ -119,7 +138,7 @@ block content
       .album__circle4
       .album__circle5
       .album__circle6
-  +page-social()       
+  +page-social()      
     .page-social__nav
       h2.page-social__title Being Social
         span ::
@@ -169,7 +188,7 @@ block content
       name: 'MI MUSIC',
       date: '10 Jan 2018',
     }, 'min')
-  +page-news()
+  +page-news()(id='id_news')
     ul.page-news__list
       +page-news-item({
         id: '1',

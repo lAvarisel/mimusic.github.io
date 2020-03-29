@@ -68,6 +68,19 @@
     letter-spacing: 3.6px;
     text-align: center;
     font-family: Barlow-Bold;
+    @media (max-width: 1150px) and (min-width: 916px) {
+      width: 200px;
+      height: 60px;
+    }
+    @media (max-width: 915px) and (min-width: 671px) {
+      width: 200px;
+      height: 60px;
+    }
+    @media (max-width: 670px) {
+      width: 135px;
+      height: 40px;
+      font-size: 10px;
+    }
   }
   &--page-slides__btns_play {
     display: inline-flex;
@@ -79,6 +92,18 @@
     border-radius: 50%;
     background-color: transparent;
     margin-left: 30px;
+    @media (max-width: 1150px) and (min-width: 916px) {
+      width: 80px;
+      height: 80px;
+    }
+    @media (max-width: 915px) and (min-width: 671px) {
+      width: 80px;
+      height: 80px;
+    }
+    @media (max-width: 670px) {
+      width: 40px;
+      height: 40px;
+    }
   }
   &--page-slides__btns_find:hover,
   &--page-slides__btns_play:hover,
@@ -102,6 +127,15 @@
     font-family: Barlow-Bold;
     font-size: 14px;
     margin-left: 98px;
+    @media (max-width: 670px) {
+      margin-left: 0;
+      width: 200px;
+      height: 30px;
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      margin-left: -100px;
+    }
   }
   &--livedates__btns_sold,
   &--livedates__btns_sold:hover {
@@ -119,6 +153,16 @@
     font-size: 14px;
     margin-left: 98px;
     cursor: default;
+    pointer-events: none;
+    @media (max-width: 670px) {
+      margin-left: 0;
+      width: 200px;
+      height: 30px;
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      margin-left: -100px;
+    }
   }
   &--livedates__btns_viewAll,
   &--album__btns_viewAll,
@@ -235,6 +279,48 @@
     font-family: Barlow-Bold;
     font-size: 14px;
     text-transform: uppercase;
+  }
+  // @media (min-width: 1200px) {
+
+  // }
+  @media (min-width: 1035px) and (max-width: 1200px){
+    &--album__smallbtn_1,
+    &--album__smallbtn_2,
+    &--album__bigbtn_1,
+    &--album__bigbtn_2 {
+      width: 300px;
+      height: 300px;
+      // margin: 0 auto;
+      // transform: none;
+      // margin-top: 15px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1035px){
+    &--album__smallbtn_1,
+    &--album__smallbtn_2,
+    &--album__bigbtn_1,
+    &--album__bigbtn_2 {
+      width: 200px;
+      height: 200px;
+      // margin: 0 auto;
+      // transform: none;
+      // margin-top: 15px;
+    }
+  }
+  @media (max-width: 767px) {
+    &--album__smallbtn_1,
+    &--album__smallbtn_2,
+    &--album__bigbtn_1,
+    &--album__bigbtn_2 {
+      width: 230px;
+      height: 230px;
+      margin: 0 auto;
+      transform: none;
+      margin-top: 15px;
+    }
+    &--page-news__btn_viewAll {
+      font-size: 16px;
+    }
   }
 
   // &__icon {

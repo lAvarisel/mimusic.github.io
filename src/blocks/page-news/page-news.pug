@@ -18,7 +18,7 @@ mixin page-news(text, mods)
       }
     }
 
-  .page-news(class=allMods)&attributes(attributes)
+  section.page-news(class=allMods)&attributes(attributes)
     .page-news__inner
       block
 
@@ -52,4 +52,5 @@ mixin page-news-item(data, mod)
     span.page-news__itemDate= data.date
     h2.page-news__itemTitle= data.title
     p.page-news__itemContent= data.content
+    +btn('BUY TICKETS', 'page-news__btn')(class = 'page-news__btn_mobile')
 

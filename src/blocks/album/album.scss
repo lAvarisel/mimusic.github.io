@@ -164,4 +164,38 @@
     z-index: -1;
     background-color: #fff;
   }
+  @media (min-width: 768px) and (max-width: 1200px){
+    &__rectangle1,
+    &__rectangle3 {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+    &__titleName {
+      font-size: 20px;
+    }
+    &__subtitle {
+      font-size: 10px;
+    }
+    &__albums {
+      flex-direction: column;
+    }
+    &__rectangle1,
+    &__rectangle2,
+    &__rectangle3,
+    &__rectangle4,
+    &__circle1,
+    &__circle2 {
+      display: none;
+    }
+    &__column_1 {
+      order: 1;
+    }
+    &__column_3 {
+      order: 2;
+    }
+    &__column_2 {
+      order: 3;
+    }
+  }
 }

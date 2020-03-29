@@ -20,7 +20,6 @@
   align-items: center;
   height: 100vh;
   color: #fff;
-  position: relative;
   background: #0134a0;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
@@ -28,6 +27,72 @@
   position: relative;
   z-index: 20;
 
+  &__dot {
+    position: relative;
+    display: flex;
+    width: 85px;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      top: 47%;
+      right: 0;
+      animation: slideOut 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+      @keyframes slideOut {
+        0% {
+          width: 47px;
+          left: auto;
+          right: 0;
+        }
+        100% {
+          width: 24px;
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+  .slick-slider {
+    position: initial;
+  }
+  .slick-dots {
+    position: absolute;
+    width: 100px;
+    top: 35%;
+    right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    li {
+      margin-top: 50px;
+      width: 85px;
+      opacity: 0.5;
+    }
+    li:hover {
+      opacity: 1;
+    }
+  }
+  .slick-dots .slick-active {
+    opacity: 1;
+  }
+  .slick-active &__dot:before {
+    width: 47px;
+    animation: slideIn 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+    @keyframes slideIn {
+      0% {
+        width: 0;
+        left: auto;
+        right: 0;
+      }
+      100% {
+        width: 47px;
+        left: auto;
+        right: 0;
+      }
+    }
+  }
   p {
     margin: 0;
     margin-top: 10px;
@@ -85,5 +150,141 @@
     letter-spacing: -1.2px;
     text-align: left;
     margin: 0;
+  }
+  @media (max-width: 1150px) and (min-width: 916px) {
+    &__title{
+      p {
+        font-size: 26px;
+      }
+    }
+    h1 {
+      font-size: 90px;
+    }
+    p {
+      font-size: 26px;
+    }
+  }
+  @media (max-width: 915px) and (min-width: 671px) {
+    &__title{
+      width: 300px;
+      p {
+        font-size: 16px;
+      }
+    }
+    h1 {
+      font-size: 60px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 670px) and (min-width: 576px) {
+    &__title{
+      width: 300px;
+      p {
+        font-size: 16px;
+      }
+    }
+    &__btns {
+      span {
+        display: block;
+      }
+    }
+    &__btns {
+      display: flex;
+    }
+    & p {
+      max-width: auto;
+    }
+    h1 {
+      font-size: 60px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .slick-active &__dot:before {
+      display: none;
+    }
+    .slick-dots li &__dot::before {
+      display: none;
+    }
+    &__dot,
+    .slick-dots,
+    .slick-dots li {
+      width: 15px;
+    }
+    .slick-dots {
+      right: 15px;
+    }
+  }
+  @media (max-width: 575px) and (min-width: 425px) {
+    &__title{
+      width: 165px;
+      height: 20px;
+      p {
+        font-size: 11px;
+      }
+    }
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 13px;
+    }
+    &__btns {
+      span {
+        display: none;
+      }
+    }
+    .slick-active &__dot:before {
+      display: none;
+    }
+    .slick-dots li &__dot::before {
+      display: none;
+    }
+    &__dot,
+    .slick-dots,
+    .slick-dots li {
+      width: 15px;
+    }
+    .slick-dots {
+      right: 15px;
+    }
+  }
+  @media (max-width: 424px) {
+    &__title{
+      width: 165px;
+      height: 20px;
+      p {
+        font-size: 11px;
+      }
+    }
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 11px;
+      max-width: 250px;
+
+    }
+    &__btns {
+      span {
+        display: none;
+      }
+    }
+    .slick-active &__dot:before {
+      display: none;
+    }
+    .slick-dots li &__dot::before {
+      display: none;
+    }
+    &__dot,
+    .slick-dots,
+    .slick-dots li {
+      width: 15px;
+    }
+    .slick-dots {
+      right: 15px;
+    }
   }
 }

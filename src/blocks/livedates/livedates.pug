@@ -18,7 +18,7 @@ mixin livedates(text, mods)
       }
     }
 
-  .livedates(class=allMods)&attributes(attributes)
+  section.livedates(class=allMods)&attributes(attributes)
     .livedates__inner
       block
 
@@ -40,7 +40,7 @@ mixin livedates-item(data, mod)
       .livedates__calendar
         p.livedates__day= data.day
         p.livedates__month= data.month
-      img(src=data.img, alt="livedate decorate image")
+      img.livedates__preview(src=data.img, alt="livedate decorate image")
       .livedates__description
         p.livedates__name= data.name
         p.livedates__subtitle= data.description

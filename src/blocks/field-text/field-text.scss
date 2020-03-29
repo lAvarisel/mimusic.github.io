@@ -61,4 +61,9 @@
       background-color: lighten($color-danger, 35%);
     }
   }
+  @media (max-width: 670px) {
+    &__input {
+      width: 250px;
+    }
+  }
 }

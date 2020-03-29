@@ -184,4 +184,85 @@
   &__rectangle {
     margin-top: 40px;
   }
+  @media (min-width: 768px) and (max-width: 1055px) {
+    
+  }
+  @media (min-width: 698px) and (max-width: 767px) {
+    &__title {
+      font-size: 20px;
+      h2 {
+        font-size: 20px;
+      }
+    }
+    &__item {
+      position: relative;
+    }
+    &__place,
+    &__time {
+      font-size: 10px;
+    }
+    &__day,
+    &__month {
+      font-size: 12px;
+    }
+    &__name,
+    &__subtitle {
+      font-size: 12px;
+    }
+    &__preview {
+      display: block;
+    }
+    &__description {
+      margin-left: 5px;
+    }
+    &__place,
+    &__time {
+      padding-left: 20px;
+    }
+    &__calendar {
+      width: 40px;
+    }
+    &__list {
+      margin-top: 0;
+    }
+  }
+  @media (max-width: 697px) {
+    &__title {
+      font-size: 20px;
+      h2 {
+        font-size: 20px;
+      }
+    }
+    &__item {
+      position: relative;
+    }
+    &__place,
+    &__time {
+      font-size: 10px;
+    }
+    &__day,
+    &__month {
+      font-size: 12px;
+    }
+    &__name,
+    &__subtitle {
+      font-size: 12px;
+    }
+    &__preview {
+      display: none;
+    }
+    &__description {
+      margin-left: 5px;
+    }
+    &__place,
+    &__time {
+      padding-left: 20px;
+    }
+    &__calendar {
+      width: 40px;
+    }
+    &__list {
+      margin-top: 0;
+    }
+  }
 }

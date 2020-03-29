@@ -55,4 +55,22 @@
   &__text {
     @include hide-text;
   }
+
+  &--mobile {
+    justify-content: center;
+    position: absolute;
+    /* text-align: right;
+    right: 15vw;
+    top: 50vw; */
+    bottom: 10px;
+    li {
+      margin: 15px;
+    }
+  }
+
+  @media (max-width: ($menu-desktop-width - 1)) {
+    & {
+      display: none;
+    }
+  }
 }

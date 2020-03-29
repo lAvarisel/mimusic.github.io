@@ -14,4 +14,9 @@
     color: $text-color-muted;
     line-height: 1.2em;
   }
+  @media (max-width: 670px) {
+    & {
+      width: 250px;
+    }
+  }
 }

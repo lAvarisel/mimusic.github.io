@@ -37,17 +37,23 @@ html(class='page  no-js', lang='ru')
     noscript У вас отключен JavaScript. Это пугает.
 
     .page__inner
+
+      +page-header()
+        +logo('/')
+          img(src='img/logo.png', alt='Logo')
+        block nav
+        
       .page__content
 
-        +page-header()
-          +logo('/')
-            img(src='img/logo.png', alt='Logo')
-          block nav
+        //- +page-header()
+        //-   +logo('/')
+        //-     img(src='img/logo.png', alt='Logo')
+        //-   block nav
 
         block content
 
       .page__footer-wrapper
-        +page-footer()
+        +page-footer()(id='id_about')
           block footer
             p «Подвал»
             p Контактный телефон: #[a(href='tel:+70000000000') +7 000 000 00 00]
