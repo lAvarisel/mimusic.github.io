@@ -95,14 +95,14 @@ $(window).scroll(function(){
     switch(id) {
       case 'id_livedates':
         if ( scroll > (top+405) && scroll < bottom) {
-          $('li.main-nav__item--active').removeClass('main-nav__item--active');
-          $('a[href="#'+id+'"]').parent().addClass('main-nav__item--active');
+          $('.main-nav__item.main-nav__item--active').removeClass('main-nav__item--active');
+          $('.main-nav__item a[href="#'+id+'"]').parent().addClass('main-nav__item--active');
         }
         break;
       default:
         if ( scroll > top && scroll < bottom) {
-          $('li.main-nav__item--active').removeClass('main-nav__item--active');
-          $('a[href="#'+id+'"]').parent().addClass('main-nav__item--active');
+          $('.main-nav__item.main-nav__item--active').removeClass('main-nav__item--active');
+          $('.main-nav__item a[href="#'+id+'"]').parent().addClass('main-nav__item--active');
         }
     }
   })
@@ -112,8 +112,8 @@ $(window).scroll(function(){
     let scroll = $(window).scrollTop();
     let id = $(foot).attr('id');
     if ( scroll > (top+650) && scroll < bottom) {
-      $('li.main-nav__item--active').removeClass('main-nav__item--active');
-      $('a[href="#'+id+'"]').parent().addClass('main-nav__item--active');
+      $('.main-nav__item.main-nav__item--active').removeClass('main-nav__item--active');
+      $('.main-nav__item a[href="#'+id+'"]').parent().addClass('main-nav__item--active');
     }
   })
 });
