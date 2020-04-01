@@ -100,7 +100,7 @@
   //   }
   // }
   &__item--active &__btn_mobile {
-    display: block;
+    // display: block;
     position: absolute;
     right: 25px;
     bottom: 5px;
@@ -257,6 +257,9 @@
   @media (max-width: 1180px) {
     &__slider {
       display: none;
+    }
+    &__item--active &__btn_mobile {
+      display: block;
     }
   }
   @media (max-width: 768px) {
