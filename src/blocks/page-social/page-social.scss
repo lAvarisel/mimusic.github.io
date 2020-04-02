@@ -373,48 +373,65 @@
     }
   }
   @media (min-width: 320px) {
+    padding-bottom: 200px;
+    padding-top: 150px;
     &__nav {
-      width: 105px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
     }
     &__inner {
       grid-column-gap: 10px;
-      grid-template-columns: 100px auto auto;
-      grid-template-rows: 160px 160px 160px 160px;
+      // grid-template-columns: 100px auto auto;
+      // grid-template-rows: 160px 160px 160px 160px;
+      // grid-template-areas: 
+      // 'navigation item1'
+      // 'navigation item2'
+      // 'navigation item3'
+      // 'navigation item4';
+      grid-row-gap: 15px;
+      grid-template-columns: auto;
+      grid-template-rows: auto 230px 230px 230px 230px;
       grid-template-areas: 
-      'navigation item1'
-      'navigation item2'
-      'navigation item3'
-      'navigation item4';
+      'navigation'
+      'item1'
+      'item2'
+      'item3'
+      'item4';
       justify-items: center;
-      padding-left: 15px;
-    }
-    &__item1,
-    &__itemInner,
-    &__item4 {
-      padding: 5px;
-    }
-    &__item1,
-    &__item4 {
-       display: grid;
-      grid-template-columns: 1fr 3fr;
-      grid-template-rows: auto 20px 20px;
-      height: 160px;
-      width: 160px;
+      // padding-left: 15px;
     }
     &__itemInner {
-      height: 115px;
+      padding: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    &__item1,
+    &__item4 {
+      //  display: grid;
+      // grid-template-columns: 1fr 3fr;
+      // grid-template-rows: auto 20px 20px;
+      height: 230px;
+      width: 230px;
+      padding-top: 40px;
+      padding-bottom: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    &__itemInner {
+      // height: 115px;
     }
     &__item2,
     &__item3 {
-      height: 160px;
-      width: 160px;
+      height: 230px;
+      width: 230px;
     }
     &__title {
       font-size: 20px;
     }
     &__text,
     &__link {
-      font-size: 10px;
+      font-size: 15px;
       line-height: 1;
     }
     &__itemTitle {
@@ -425,11 +442,29 @@
       font-size: 12px;
     }
     &__listLink {
-      font-size: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      span {
+        display: none;
+      }
+      padding: 5px;
+    }
+    &__svg {
+      width: 20px;
+      height: 20px;
+      transform: translateY(20%);
     }
     &__inner {
       padding-left: 7px;
       padding-right: 7px;
+    }
+    &__list {
+      display: flex;
+      margin: 0;
+      margin-top: 13px;
+    }
+    &__listItem {
+      margin: 5px;
     }
   }
 }

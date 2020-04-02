@@ -157,6 +157,9 @@
         top: 950px;
     }
     @media (max-width: 670px) {
+        &__inner {
+            padding-top: 650px;
+        }
         &__title {
             font-size: 25px;
         }
@@ -171,6 +174,10 @@
         }
         &__logo {
             font-size: 20px;
+            margin: 0;
+        }
+        form {
+            margin-bottom: 50px;
         }
     }
 }

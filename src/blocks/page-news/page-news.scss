@@ -263,6 +263,10 @@
     }
   }
   @media (max-width: 768px) {
+    &__inner {
+      padding-top: 180px;
+      padding-bottom: 180px;  
+    }
     &__item,
     &__item.page-news__item--active {
       padding: 10px;

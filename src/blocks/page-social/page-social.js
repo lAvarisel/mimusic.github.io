@@ -14,7 +14,7 @@ $(".page-social__listLink").on("click", function (event) {
     event.preventDefault();
     $(".page-social__listLink--active").removeClass('page-social__listLink--active')
     $(this).addClass('page-social__listLink--active')
-    switch (this.innerHTML) {
+    switch (this.id) {
         case 'facebook':
             $(".page-social__item--youtube").addClass('page-social__item--hidden')
             $(".page-social__item--twitter").addClass('page-social__item--hidden');
