@@ -63,7 +63,7 @@
   }
   @media (max-width: 670px) {
     &__input {
-      width: 250px;
+      max-width: calc(100vw - 50px);
     }
   }
 }

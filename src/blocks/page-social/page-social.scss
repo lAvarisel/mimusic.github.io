@@ -322,14 +322,32 @@
     &__inner {
       grid-template-columns: 150px auto auto;
     }
+    &__nav {
+      width: 125px;
+    }
+  }
+  @media (min-width: 850px) {
+    grid-column-gap: 30px;
+    &__listLink {
+      span {
+        display: contents;
+      }
+    }
+    &__svg {
+      display: none;
+    }
   }
   @media (min-width: 670px) {
     &__inner {
+      grid-column-gap: 0px;
+      grid-row-gap: 30px;
       grid-template-columns: 100px auto auto;
       grid-template-rows: 250px 250px;
       grid-template-areas: 
       'navigation item1 item2'
       'navigation item3 item4';
+      padding-left: 15px;
+      padding-right: 15px;
     }
     &__item1,
     &__item2,
@@ -362,15 +380,31 @@
     &__itemInner {
       padding: 9px;
     }
-  }
-  @media (min-width: 540px) {
-    &__inner {
-      grid-template-columns: 100px auto auto;
-      grid-template-rows: 160px 160px;
-      grid-template-areas: 
-      'navigation item1 item2'
-      'navigation item3 item4';
+    // &__inner {
+    //   grid-template-columns: 100px auto auto;
+    //   grid-template-rows: 230px 230px;
+    //   grid-template-areas: 
+    //   'navigation item1 item2'
+    //   'navigation item3 item4';
+    // }
+    &__list {
+      flex-direction: column;
     }
+    &__nav {
+      width: 100px;
+    }
+  }
+  @media (min-width: 600px) {
+    padding-top: 215px;
+    &__inner {
+      grid-template-columns:  auto auto;
+      grid-template-rows: auto 230px 230px;
+      grid-template-areas: 
+      'navigation navigation'
+      'item1 item2'
+      'item3 item4';
+    }
+
   }
   @media (min-width: 320px) {
     padding-bottom: 200px;

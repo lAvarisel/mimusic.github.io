@@ -179,5 +179,9 @@
         form {
             margin-bottom: 50px;
         }
+        &__circle1,
+        &__circle2 {
+            display: none;
+        }
     }
 }

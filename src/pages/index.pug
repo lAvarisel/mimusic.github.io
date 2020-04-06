@@ -21,6 +21,7 @@ block nav
       +social-link('https://www.youtube.com/', 'yt')(title='YouTube')
         img(src="img/youtube.png", alt="")
     div(class='main-nav__toggler' id = 'navToggle')
+
     //- +burger()(id='navToggle')
 
 block content
@@ -115,20 +116,20 @@ block content
         p.album__subtitle For all the latest performances find us on Spotify
       .album__albums
         .album__column_1
-          +btn('', 'album__smallbtn_1')
+          +btn('', 'album__smallbtn_1')(id='album__1')
             img(src='img/album-play-btn.png', alt='Play button')
             //- <audio src="media/Alan Walker - All Falls Down [midi-mp3.org].mp3" controls></audio>
           .album__rectangle1
           .album__rectangle2
         .album__column_2
-          +btn('', 'album__bigbtn_1')
+          +btn('', 'album__bigbtn_1')(id='album__2')
             img(src='img/album-play-btn.png', alt='Play button')
-          +btn('', 'album__bigbtn_2')
+          +btn('', 'album__bigbtn_2')(id='album__3')
             img(src='img/album-play-btn.png', alt='Play button')
           img.album__logo(src="./img/logo.png", alt="logo image")
           +btn('View all albums ::', 'album__btns_viewAll')
         .album__column_3
-          +btn('', 'album__smallbtn_2')
+          +btn('', 'album__smallbtn_2')(id='album__4')
             img(src='img/album-play-btn.png', alt='Play button')
           .album__rectangle3
           .album__rectangle4
@@ -262,7 +263,8 @@ block content
           date: 'JAN 20, 2018',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         })
-
+  +player()(class='player--hidden', id='player-id')
+    //- div(id="app") {{ message }}
 block footer
   .page-footer__circle1
   .page-footer__circle2

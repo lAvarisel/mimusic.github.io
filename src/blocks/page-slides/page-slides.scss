@@ -133,6 +133,8 @@
     }
   }
   &__btns {
+    display: flex;
+    align-items: center;
     margin-top: 43px;
     span {
       font-family: Barlow-Bold;
@@ -188,6 +190,7 @@
     &__btns {
       span {
         display: block;
+        font-size: 15px;
       }
     }
     &__btns {
@@ -217,7 +220,7 @@
       right: 15px;
     }
   }
-  @media (max-width: 575px) and (min-width: 425px) {
+  @media (max-width: 575px) and (min-width: 470px) {
     &__title{
       width: 165px;
       height: 20px;
@@ -225,16 +228,14 @@
         font-size: 11px;
       }
     }
+    // &__btns {
+    //   flex-direction: column;
+    // }
     h1 {
       font-size: 40px;
     }
     p {
       font-size: 13px;
-    }
-    &__btns {
-      span {
-        display: none;
-      }
     }
     .slick-active &__dot:before {
       display: none;
@@ -250,8 +251,14 @@
     .slick-dots {
       right: 15px;
     }
+    &__btns {
+      span {
+        display: block;
+        font-size: 15px;
+      }
+    }
   }
-  @media (max-width: 424px) {
+  @media (max-width: 470px) {
     &__title{
       width: 165px;
       height: 20px;
