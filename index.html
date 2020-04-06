@@ -188,12 +188,12 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 <p class="album__subtitle">For all the latest performances find us on Spotify</p>
               </div>
               <div class="album__albums">
-                <div class="album__column_1"><button class="btn  btn--album__smallbtn_1"><img src="img/album-play-btn.png" alt="Play button"></button>
+                <div class="album__column_1"><button class="btn  btn--album__smallbtn_1" id="album__1"><img src="img/album-play-btn.png" alt="Play button"></button>
                   <div class="album__rectangle1"></div>
                   <div class="album__rectangle2"></div>
                 </div>
-                <div class="album__column_2"><button class="btn  btn--album__bigbtn_1"><img src="img/album-play-btn.png" alt="Play button"></button><button class="btn  btn--album__bigbtn_2"><img src="img/album-play-btn.png" alt="Play button"></button><img class="album__logo" src="./img/logo.png" alt="logo image"><button class="btn  btn--album__btns_viewAll">View all albums ::</button></div>
-                <div class="album__column_3"><button class="btn  btn--album__smallbtn_2"><img src="img/album-play-btn.png" alt="Play button"></button>
+                <div class="album__column_2"><button class="btn  btn--album__bigbtn_1" id="album__2"><img src="img/album-play-btn.png" alt="Play button"></button><button class="btn  btn--album__bigbtn_2" id="album__3"><img src="img/album-play-btn.png" alt="Play button"></button><img class="album__logo" src="./img/logo.png" alt="logo image"><button class="btn  btn--album__btns_viewAll">View all albums ::</button></div>
+                <div class="album__column_3"><button class="btn  btn--album__smallbtn_2" id="album__4"><img src="img/album-play-btn.png" alt="Play button"></button>
                   <div class="album__rectangle3"></div>
                   <div class="album__rectangle4"></div>
                   <div class="album__circle1"></div>
@@ -276,6 +276,15 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
           </div>
         </div>
       </section>
+      <div class="player player--hidden" id="player-id">
+        <div class="player__inner">
+          <div class="player__header">
+            <div class="player__close" id="player__close_id"></div>
+            <div class="player__collapse" id="player__collapse_id"></div><img class="player__logo" id="pl_logo" />
+            <h3 class="player__albumName" id="pl_album"></h3>
+          </div><audio id='audio-player' src="media/Alan Walker - All Falls Down [midi-mp3.org].mp3" controls></audio>
+        </div>
+      </div>
     </div>
     <div class="page__footer-wrapper">
       <footer class="page-footer" role="contentinfo" id="id_about">
